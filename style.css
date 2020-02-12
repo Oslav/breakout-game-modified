@@ -45,27 +45,98 @@ canvas {
 .btn:active {
   transform: scale(0.98);
 }
-
-.rules-btn {
-  position: absolute;
-  top: 30px;
-  left: 30px;
+#close-rules-btn {
+  float: right;
+}
+#close-updates-btn {
+  float: right;
 }
 
-.rules {
+.easy-btn, .medium-btn, .hard-btn, .close-right-menu-btn {
+margin: 2px;
+}
+.right-menu-btn {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  margin-top: 36px;
+}
+.menu-btn {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+}
+.menu {
   position: absolute;
   top: 0;
   left: 0;
   background: #333;
   color: #fff;
   min-height: 100vh;
+  width: 450px;
+  padding: 20px;
+  line-height: 1.5;
+  transform: translateX(-450px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu.show {
+  transform: translateX(0);
+}
+
+.rules {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: black;
+  color: #fff;
+  max-height: 500px;
   width: 400px;
   padding: 20px;
   line-height: 1.5;
   transform: translateX(-400px);
-  transition: transform 1s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  margin-top: 60px;
 }
-
-.rules.show {
+.rules.read {
+  transform: translateX(0);
+}
+#version {
+float: right;
+}
+#close-btn {
+    float: right;
+}
+.updates.revision {
+  transform: translateX(0);
+}
+.updates {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: black;
+  color: #fff;
+  max-height: 500px;
+  width: 400px;
+  padding: 20px;
+  line-height: 1.5;
+  transform: translateX(-400px);
+  transition: transform 0.3s ease-in-out;
+  margin-top: 400px;
+}
+.right-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #411;
+  color: #fff;
+  max-height: 100px;
+  width: 400px;
+  padding: 20px;
+  line-height: 1.5;
+  transform: translateX(-400px);
+  transition: transform 0.3s ease-in-out;
+}
+.right-menu.right-show {
   transform: translateX(0);
 }
