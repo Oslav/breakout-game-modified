@@ -1,9 +1,23 @@
 const rulesBtn = document.getElementById('rules-btn');
+const optionsBtn = document.getElementById('right-menu-btn');
+const closeOptionsBtn = document.getElementById('close-right-menu-btn');
+const versionBtn = document.getElementById('version-btn');
+const easyLvl = document.getElementById('easy-btn');
+const mediumLvl = document.getElementById('medium-btn');
+const hardLvl = document.getElementById('hard-btn');
+const menuBtn = document.getElementById('menu-btn');
 const closeBtn = document.getElementById('close-btn');
+const closeRulesBtn = document.getElementById('close-rules-btn');
+const closeUpdatesBtn = document.getElementById('close-updates-btn');
+
+const menu = document.getElementById('menu');
+const options = document.getElementById('right-menu')
 const rules = document.getElementById('rules');
+const updates = document.getElementById('updates')
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
+let dificult = 0;
 let score = 0;
 
 const brickRowCount = 9;
@@ -25,7 +39,7 @@ const paddle = {
   y: canvas.height - 20,
   w: 80,
   h: 10,
-  speed: 8,
+  speed: 26,
   dx: 0
 };
 
@@ -68,7 +82,7 @@ function drawPaddle() {
   ctx.closePath();
 }
 
-// Draw score oon canvas
+// Draw score on canvas
 function drawScore() {
   ctx.font = '20px Arial';
   ctx.fillText(`Score: ${score}`, canvas.width - 100, 30);
@@ -218,6 +232,15 @@ function keyUp(e) {
 document.addEventListener('keydown', keyDown);
 document.addEventListener('keyup', keyUp);
 
-// Rules and close event handlers
-rulesBtn.addEventListener('click', () => rules.classList.add('show'));
-closeBtn.addEventListener('click', () => rules.classList.remove('show'));
+// Menu and close event handlers
+menuBtn.addEventListener('click', () => menu.classList.add('show'));
+closeBtn.addEventListener('click', () => menu.classList.remove('show'));
+
+rulesBtn.addEventListener('click', () => rules.classList.add('read'));
+closeRulesBtn.addEventListener('click', () => rules.classList.remove('read'));
+
+versionBtn.addEventListener('click', () => updates.classList.add('revision'));
+closeUpdatesBtn.addEventListener('click', () => updates.classList.remove('revision'));
+
+optionsBtn.addEventListener('click', () => options.classList.add('right-show'));
+closeOptionsBtn.addEventListener('click', () => options.classList.remove('right-show'));
