@@ -9,15 +9,44 @@
   </head>
   <body>
     <h1>Breakout!</h1>
-    <button id="rules-btn" class="btn rules-btn">Show Rules</button>
+    <button id="menu-btn" class="btn menu-btn">Menu</button>
+      <button id="right-menu-btn" class="btn right-menu-btn">Options</button>
+    <div id="menu" class="menu">
     <div id="rules" class="rules">
-      <h2>How To Play:</h2>
+    <button id="close-rules-btn" class="btn close-rules-btn">X</button>
+      <h2 id="rules-header">Welcome to the Modified Breakot!</h2>
       <p>
         Use your right and left keys to move the paddle to bounce the ball up
         and break the blocks.
       </p>
       <p>If you miss the ball, your score and the blocks will reset.</p>
-      <button id="close-btn" class="btn">Close</button>
+      <p id="version">ver Alpha 0.1</p>
+      </div>
+      <div id="updates" class="updates">
+    <button id="close-updates-btn" class="btn close-updates-btn">X</button>
+      <h2 id="rules-header">Last Updates</h2>
+      <p>
+In version Alpha 0.1 of this beautiful game where added next fixtures: <br>
+<ul><li>Edited "Rules" menu;</li>
+<li>Added "Last Updates" menu;</li>
+<li>Added music player;</li>
+<li>Added possibility to choosing between two levels of difficults;</li>
+<li>Edited comment in the script of script.js document at the 93 line from "oon" to "on";</li>
+</ul>
+Please, enjoy! <br>
+Mindlessness team.
+      </p>
+      </div>
+      <button id="rules-btn" class="btn rules-btn">Show Rules</button>
+      <button id="version-btn" class="btn version-btn">Last Updates</button>
+    <button id="close-btn" class="btn">X</button>
+    </div>
+
+    <div id="right-menu" class="right-menu">
+    <button id="easy-btn" class="btn easy-btn">Easy</button>
+    <button id="medium-btn" class="btn medium-btn">Medium</button>
+    <button id="hard-btn" class="btn hard-btn">Ricaro Miloss</button>
+ <button id="close-right-menu-btn" class="btn close-right-menu-btn">X</button>
     </div>
 
     <canvas id="canvas" width="800" height="600"></canvas>
