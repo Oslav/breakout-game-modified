@@ -14,7 +14,7 @@
   transition: transform 0.3s ease-in-out;
 }
 .music-container.ricardo-show {
-  transform: translateX(0);
+  transform: translateX(200px);
 }
 
 .img-container {
